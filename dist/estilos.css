@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
 
 .background{
     width: 100vw;
@@ -16,10 +17,20 @@
     justify-content: space-between;
     align-items: center;
 }
+.LogoSide{
+    display: flex;
+    align-items: center;
+}
 .logo{
     margin: 0.5rem 5rem;
     width: 3.7rem;
     height: 3.8rem;
+}
+.LogoSidetext{
+    margin: 0 1rem;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 3rem;
+    color: white;
 }
 .gitHub{
     display: flex;
@@ -53,16 +64,14 @@
     height: calc(100vh - 6rem);
     background-color: #24292e;
     opacity: .9;
-    z-index: 2;
 }
 .sidebarMenu{
-    margin: 3rem 0rem;
+    list-style: none;
     position: absolute;
-    left: -2.5rem;
-    list-style:none;
+    left: -40px;
 }
 .itemList{
-    margin: 0.2rem 0rem;
+    margin: 0.4rem 0rem;
     background-color: #343434;
     width: 15rem;
     text-align: center;
@@ -70,32 +79,58 @@
 }
 
 .itemList:hover{
-    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.4);
+
+}
+
+.sidebar-text{
+    position: absolute;
+    padding: 2rem 3rem;
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 .enlaceLista{
-    outline: none;
-    text-decoration:none;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    display:inline-block;
-    width:100%;
-    padding: 2rem 2rem;
-    text-align: left;
-    z-index: 200;
+    display: flex;
+    height: 5rem;
+    text-decoration: none;
 
+}
+a:hover .linkColorTransition{
+    width: 100%;
 }
 .linkColor{
-    height: 5.18rem;
-    width: 0.45rem;
+    width: 0.5rem;
+    height: 100%;
     position: absolute;
-    left: 14.55rem;
-    top: 0rem;
-    z-index: 500;
+    right: 0px;
 }
 
+.linkColorTransition{
+    width: 0.5rem;
+    margin-left: auto;
+    transition: all, 0.2s;
+}
 
+.linkA-transition{
+    background-color: RGBA(136, 80, 83, .50);
+    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.4);
+}
+
+.linkB-transition{
+    background-color: rgba(254, 95, 85,.50);
+    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.4);
+}
+
+.linkC-transition{
+    background-color: rgba(119, 125, 167, .50);
+    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.4);
+}
+
+.linkD-transition{
+    background-color: rgba(198, 236, 174, .50);
+    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.4);
+}
 
 .linkA{
     background-color: #885053;
