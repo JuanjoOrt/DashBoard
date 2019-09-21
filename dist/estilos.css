@@ -7,7 +7,7 @@
     background-size: cover;
 }
 .navbar{
-    width: 100%;
+    width: 100vw;
     height: 6rem;
     background-color: #24292e;
     display: flex;
@@ -17,7 +17,7 @@
     align-items: center;
 }
 .logo{
-    margin: 0.5rem 3rem;
+    margin: 0.5rem 5rem;
     width: 3.7rem;
     height: 3.8rem;
 }
@@ -49,18 +49,71 @@
 }
 
 .sidebar{
-    width: 20rem;
+    width: 15rem;
     height: calc(100vh - 6rem);
     background-color: #24292e;
     opacity: .9;
     z-index: 2;
 }
+.sidebarMenu{
+    margin: 3rem 0rem;
+    position: absolute;
+    left: -2.5rem;
+    list-style:none;
+}
+.itemList{
+    margin: 0.2rem 0rem;
+    background-color: #343434;
+    width: 15rem;
+    text-align: center;
+    position: relative;
+}
 
+.itemList:hover{
+    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.4);
+}
+
+
+.enlaceLista{
+    outline: none;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display:inline-block;
+    width:100%;
+    padding: 2rem 2rem;
+    text-align: left;
+    z-index: 200;
+
+}
+.linkColor{
+    height: 5.18rem;
+    width: 0.45rem;
+    position: absolute;
+    left: 14.55rem;
+    top: 0rem;
+    z-index: 500;
+}
+
+
+
+.linkA{
+    background-color: #885053;
+}
+.linkB{
+    background-color: #FE5F55;
+}
+.linkC{
+    background-color: #777DA7;
+}
+.linkD{
+    background-color: #C6ECAE;
+}
 .main{
     background-color: #ccc;
-    width: calc(100vw - 20rem);
+    width: calc(100vw - 15rem);
     height: calc(100vh - 6rem);
-    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.75);w
+    box-shadow: inset 10px 10px 17px -16px rgba(0,0,0,0.75);
 }
 
 
