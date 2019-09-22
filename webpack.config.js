@@ -1,28 +1,26 @@
-// Imports: Dependencies
-const path = require('path');
 
-// Webpack Configuration
-const config = {
-    entry: {
-       app: './src/index.js'
-    },
+const path = require("path");
+
+module.exports = {
+    entry: path.resolve(__dirname, "src/index.jsx"),
     output: {
+        path: path.resolve(__dirname, "dist"),
         filename: "bundle.js"
     },
+    resolve: {
+        extensions: [".js", ".jsx"]
+    },
     module: {
-        rules : [
+        rules: [
             {
-                test: /\.jsx$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: ['babel-loader'],
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader'],
+                use: ["babel-loader"]
             }
         ]
     },
-    plugins: [],
+    devServer: {
+        contentBase: path.resolve(__dirname, "dist"),
+        port: 9000
+    }
 };
-// Exports
-module.exports = config;
