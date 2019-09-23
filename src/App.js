@@ -1,14 +1,26 @@
-import React from "react";
-import Layout from "./Layout";
+import React from 'react'
+import { Provider } from 'react-redux'
+import {createStore} from "redux";
+import reducer from "./reducers";
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import routeLink from './RouteLink';
+import Home from './components/home/index';
 
 
+const store = createStore(reducer);
 
 const App = (props) => {
 
     return(
-        <Layout>
-            Test
-        </Layout>
+        <Provider store={store}>
+            <Router>
+                <Route exact path={routeLink.home} component={Home} />
+                <Route path={routeLink.dailyGraph} component={Home}/>
+                <Route path={routeLink.weeklyGraph} component={Home}/>
+                <Route path={routeLink.monthlyGraph} component={Home}/>
+                <Route path={routeLink.generalData} component={Home}/>
+            </Router>
+        </Provider>
     )
 };
 
