@@ -1,16 +1,19 @@
 import React from 'react';
 import SidebarItem from './SidebarItem';
 import routeLink from '../../RouteLink';
+import {Link} from "react-router-dom";
 
 const Layout = props => {
 
     return(
-        <div className="background">
+        <div className="background"  >
             <nav className="navbar">
-                <div className="LogoSide">
-                    <img className="logo" src="./images/logo.png" alt="logo corporativo" />
-                        <div className="LogoSidetext">SHARES GRAPH</div>
-                </div>
+                <Link to={routeLink.home} style={{ textDecoration: 'none' }}>
+                    <div className="LogoSide">
+                        <img className="logo" src="./images/logo.png" alt="logo corporativo" />
+                        <div className="LogoSidetext" >SHARES GRAPH</div>
+                    </div>
+                </Link>
 
                 <a href="https://github.com/JuanjoOrt" className="gitHub">
                     <img src="./images/github-brands.svg" className="gitHubIcon" alt="gitHub Icon" />
