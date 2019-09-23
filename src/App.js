@@ -6,9 +6,8 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import routeLink from './RouteLink';
 import Home from './components/home/index';
 import DailyGraph from './components/dailyGraph/index'
+import store from './store/createStorage';
 
-
-const store = createStore(reducer);
 
 const App = (props) => {
 

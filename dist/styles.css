@@ -157,7 +157,6 @@ a:hover .linkColorTransition{
 }
 
 .main-panel{
-    background-color: azure;
     margin: 2rem auto;
     width: 92%;
     height: 88%;
@@ -165,8 +164,8 @@ a:hover .linkColorTransition{
 
 .graph-item{
     color: white;
-    width: 20rem;
-    height: 14rem;
+    width: 23rem;
+    height: 16rem;
     border-radius: 5px;
     display:flex;
     flex-direction: column;
@@ -182,10 +181,16 @@ a:hover .linkColorTransition{
 
     background: white;
     width: 98%;
-    height: 83%;
+    height: 85%;
     margin-top: 4px;
     margin-left: 3px;
     border-radius: 0px 0px 5px 5px;
 }
+
+.test{
+    color: black;
+}
+
+
 
 

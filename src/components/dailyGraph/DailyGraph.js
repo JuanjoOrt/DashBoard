@@ -10,7 +10,9 @@ const DailyGraph = (props) => {
     return(
         <Layout>
             <div className='main-panel'>
-                <ItemGraph title={'Microsoft'} color={Color.dailyGraph}/>
+                <div className='main-panel-graph'>
+                    <ItemGraph title={'Microsoft'} color={Color.dailyGraph}/>
+                </div>
             </div>
         </Layout>
     )
