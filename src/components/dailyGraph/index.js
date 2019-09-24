@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-    fetchData: (url) => dispatch(fetchData(url))
+    fetchData: () => dispatch(fetchData())
 });
 
 export default connect(

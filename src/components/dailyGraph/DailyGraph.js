@@ -7,14 +7,15 @@ import Color from '../../LayoutColor'
 const DailyGraph = (props) => {
 
     useEffect(() => {
-        props.fetchData('https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=MSFT&interval=5min&apikey=demo')
+        props.fetchData()
     }, []);
 
     return(
         <Layout>
+            {console.log(props)}
             <div className='main-panel'>
                 <div className='main-panel-graph'>
-                    <ItemGraph title={'Microsoft'} color={Color.dailyGraph}/>
+                    <ItemGraph title={'Line graph'} color={Color.dailyGraph}/>
                 </div>
             </div>
         </Layout>
