@@ -9,16 +9,14 @@ const urlGoogle = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symbol=${C
 
 
 const fetchDataError = () => ({
-    data: null,
+    dataDaily: null,
     type: dailyGraphParameters.FETCH_ERROR
 });
 
-const fetchDataSuccess = (result) => {
-    return {
-        data: result,
-        type: dailyGraphParameters.FETCH_SUCCESS
-    }
-};
+const fetchDataSuccess = (result) => ({
+    dataDaily: result,
+    type: dailyGraphParameters.FETCH_SUCCESS
+});
 
 const fetchUrl = async (url) => {
     return await fetch(url)

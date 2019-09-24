@@ -11,7 +11,11 @@ const ItemGraph = (props) => {
                 <div className='graph-text'>{props.title}</div>
             </div>
             <div className='graph-content'>
-                {/*<Chart options={options} series={series} type="line" height={'245px'}/>*/}
+                {
+                    (props.dataDaily === null)
+                    ? <div> Cargando...</div>
+                    : <div> Done </div>
+                }
             </div>
         </div>
     )
