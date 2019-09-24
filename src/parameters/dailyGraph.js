@@ -1,0 +1,5 @@
+export default {
+    FETCH_SUCCESS: 'FETCH_SUCCESS',
+    FETCH_ERROR: 'FETCH_ERROR',
+    CLEAR_BUFFER: 'CLEAR_BUFFER'
+}
