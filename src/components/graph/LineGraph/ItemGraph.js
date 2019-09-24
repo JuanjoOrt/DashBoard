@@ -1,5 +1,5 @@
-import React from 'react'
-import Chart from 'react-apexcharts'
+import React, {Suspense} from 'react'
+
 
 
 const ItemGraph = (props) => {
@@ -13,8 +13,8 @@ const ItemGraph = (props) => {
             <div className='graph-content'>
                 {
                     (props.dataDaily === null)
-                    ? <div> Cargando...</div>
-                    : <div> Done </div>
+                    ? <div> Cargando... </div>
+                    : <div> DONE </div>
                 }
             </div>
         </div>

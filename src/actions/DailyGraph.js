@@ -13,10 +13,14 @@ const fetchDataError = () => ({
     type: dailyGraphParameters.FETCH_ERROR
 });
 
+
+
 const fetchDataSuccess = (result) => ({
     dataDaily: result,
     type: dailyGraphParameters.FETCH_SUCCESS
 });
+
+
 
 const fetchUrl = async (url) => {
     return await fetch(url)
@@ -26,6 +30,14 @@ const fetchUrl = async (url) => {
             return json;
         });
 };
+
+
+export const clearBuffer = () => ({
+    dataDaily: null,
+    type: dailyGraphParameters.CLEAR_BUFFER
+});
+
+
 
 export const fetchData = () =>
     async (dispatch) => {
