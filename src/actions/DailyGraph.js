@@ -1,31 +1,53 @@
 import React from "react";
 import dailyGraphParameters from '../parameters/dailyGraph';
+import ConfigApi from '../ConfigApi';
 
+const urlMicrosoft = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symbol=${ConfigApi.microsoft}&apikey=${ConfigApi.key}`;
+const urlIbm = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symbol=${ConfigApi.ibm}&apikey=${ConfigApi.key}`;
+const urlApple = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symbol=${ConfigApi.apple}&apikey=${ConfigApi.key}`;
+const urlGoogle = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symbol=${ConfigApi.google}&apikey=${ConfigApi.key}`;
 
 
 const fetchDataError = () => ({
-    data: null,
+    dataDaily: null,
     type: dailyGraphParameters.FETCH_ERROR
 });
 
-const fetchDataSuccess = (result) => {
-    console.log(result.value);
 
-    return {
-        data: null,
-        type: dailyGraphParameters.FETCH_SUCCESS
-    }
+
+const fetchDataSuccess = (result) => ({
+    dataDaily: result,
+    type: dailyGraphParameters.FETCH_SUCCESS
+});
+
+
+
+const fetchUrl = async (url) => {
+    return await fetch(url)
+        .then(res => {
+            return res.json();
+        }).then(json => {
+            return json;
+        });
 };
 
 
-export const fetchData = (url) =>
+export const clearBuffer = () => ({
+    dataDaily: null,
+    type: dailyGraphParameters.CLEAR_BUFFER
+});
+
+
+
+export const fetchData = () =>
     async (dispatch) => {
         try {
-            let result = fetch(url).then(res => {
-                    return res.json();
-                }).then(json => {
-                    return json;
-                });
+            let result = {
+                Microsoft : await fetchUrl(urlMicrosoft),
+                Google: await fetchUrl(urlGoogle),
+                Ibm: await fetchUrl(urlIbm),
+                Apple: await fetchUrl(urlApple)
+            };
             dispatch(fetchDataSuccess(result))
         } catch (error) {
             console.error(error);
