@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import TodoReducer from './TodoReducer.js';
+import DailyGraphReducer from './DailyGraphReducer.js';
 
 
 const reducer = combineReducers({
-    TodoReducer
+    DailyGraphReducer
 });
 
 export default reducer
