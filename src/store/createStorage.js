@@ -1,11 +1,14 @@
-import * as storage from 'redux-storage';
 import reducers from '../reducers';
-import { createStore, applyMiddleware, combineReducers }from 'redux';
-import createEngine from 'redux-storage-engine-localstorage';
-const reducer = storage.reducer(combineReducers(reducers));
-const engine = createEngine('my-save-key');
-const middleware = storage.createMiddleware(engine);
-const createStoreWithMiddleware = applyMiddleware(middleware)(createStore);
+import { createStore, applyMiddleware, combineReducers, compose }from 'redux';
+import thunk from 'redux-thunk'
 
-const store = createStoreWithMiddleware(reducers);
-export default store;
+
+const createStoreWithMiddleware = compose(
+    applyMiddleware(thunk)
+)(createStore);
+
+export default function createStorage() {
+    return createStoreWithMiddleware(reducers);
+}
+
+
