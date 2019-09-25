@@ -7,7 +7,7 @@ const ItemGraph = (props) => {
 
 
     return(
-        <div className='graph-item graph-daily-line'>
+        <div className={props.class}>
             {console.log(props)}
             <div className='graph-title'>
                 <div className='graph-text'>{props.title}</div>
