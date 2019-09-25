@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import  DailyGraph from './DailyGraph.js'
-import {clearBuffer, fetchData} from '../../actions/DailyGraph'
+import  AppleGraph from './AppleGraph.js'
+import {clearBuffer, fetchData} from '../../actions/AppleGraph'
 
 
 const mapStateToProps = (state, ownProps) => ({
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
     mapStateToProps,
     mapDispatchToProps
-)(DailyGraph)
+)(AppleGraph)

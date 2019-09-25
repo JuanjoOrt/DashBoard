@@ -23,9 +23,9 @@ const Layout = props => {
             <div className="container">
                 <div className="sidebar">
                     <ul className="sidebarMenu">
-                        <SidebarItem link={routeLink.dailyGraph} title={'DAILY GRAPH'} option={'A'}/>
-                        <SidebarItem link={routeLink.weeklyGraph} title={'WEEKLY GRAPH'} option={'B'}/>
-                        <SidebarItem link={routeLink.monthlyGraph} title={'MONTHLY GRAPH'} option={'C'}/>
+                        <SidebarItem link={routeLink.apple} title={'APPLE'} option={'A'}/>
+                        <SidebarItem link={routeLink.google} title={'GOOGLE'} option={'B'}/>
+                        <SidebarItem link={routeLink.microsoft} title={'MICROSOFT'} option={'C'}/>
                         <SidebarItem link={routeLink.generalData} title={'GENERAL DATA'} option={'D'}/>
                     </ul>
                 </div>

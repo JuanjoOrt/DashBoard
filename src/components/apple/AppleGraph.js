@@ -4,7 +4,7 @@ import Layout from '../layout/Layout';
 
 
 
-const DailyGraph = (props) => {
+const AppleGraph = (props) => {
 
     useEffect(() => {
         props.fetchData()
@@ -16,7 +16,7 @@ const DailyGraph = (props) => {
         <Layout>
             <div className='main-panel'>
                 <div className='main-panel-graph'>
-                    <ItemGraph title={'Line graph'}/>
+                    <ItemGraph title={'Daily Apple Shares'}/>
                 </div>
             </div>
         </Layout>
@@ -24,4 +24,4 @@ const DailyGraph = (props) => {
 }
 
 
-export default DailyGraph;
+export default AppleGraph;
