@@ -1,5 +1,5 @@
 import {combineReducers} from 'redux';
-import DailyGraphReducer from './DailyGraphReducer.js';
+import DailyGraphReducer from './AppleReducer.js';
 
 
 const reducer = combineReducers({

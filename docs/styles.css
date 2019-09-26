@@ -163,15 +163,12 @@ a:hover .linkColorTransition{
 }
 
 .graph-item{
+    width: 100rem;
+    height: 23rem;
     background: white;
     border-radius: 3px;
     box-shadow: 0px 0px 8px -4px rgba(0,0,0,0.75);
     transition: all 0.2s;
-}
-
-.graph-daily-line{
-    width: 100rem;
-    height: 23rem;
 }
 
 .graph-item:hover{

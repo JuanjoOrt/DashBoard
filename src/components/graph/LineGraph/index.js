@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import  ItemGraph from './ItemGraph.js'
-import  {clearBuffer} from '../../../actions/DailyGraph'
+import  {clearBuffer} from '../../../actions/AppleGraph'
 
 const mapStateToProps = (state, ownProps) => ({
     ...state.DailyGraphReducer

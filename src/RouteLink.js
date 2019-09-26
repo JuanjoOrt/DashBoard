@@ -2,8 +2,8 @@
 
 export default {
     home: '/',
-    dailyGraph: '/dailyGraph',
-    weeklyGraph: '/weeklyGraph',
-    monthlyGraph: '/monthlyGraph',
+    apple: '/apple',
+    google: '/google',
+    microsoft: '/microsoft',
     generalData: '/generalData',
 }
