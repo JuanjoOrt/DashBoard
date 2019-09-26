@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/JuanjoOrt/DashBoard/issues"
   },
-  "homepage": "https://github.com/JuanjoOrt/DashBoard#readme",
+  "homepage": "https://github.com/JuanjoOrt/DashBoard",
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
@@ -29,6 +30,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "gh-pages": "^2.1.1",
     "highcharts": "^7.2.0",
     "react-apexcharts": "^1.3.3",
     "react-fusioncharts": "^3.0.1",
