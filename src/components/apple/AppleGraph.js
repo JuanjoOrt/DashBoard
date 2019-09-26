@@ -17,7 +17,7 @@ const AppleGraph = (props) => {
         <Layout>
             <div className='main-panel'>
                 <div className='main-panel-graph'>
-                    <ItemGraph title={'Daily Apple Shares'}>
+                    <ItemGraph title={'Daily Apple Shares'} class={'graph-item graph-daily-line'}>
                         {
                             (props.dataAppleDaily === null)
                                 ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
