@@ -119,3 +119,28 @@ export function getBarModel(){
         }],
     }
 }
+
+export function getDonutModel(){
+    return {
+        options: {
+            labels: null,
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    chart: {
+                        width: 200
+                    },
+                    legend: {
+                        show: false
+                    }
+                }
+            }],
+            legend: {
+                position: 'right',
+                offsetY: 0,
+                height: 230,
+            }
+        },
+        series: null,
+    }
+}
