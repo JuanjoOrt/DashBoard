@@ -28,7 +28,7 @@ const AppleGraph = (props) => {
                     </div>
                     <div className='main-panel-bottomSide'>
                         <div className='main-panel-bottomSide-left'>
-                            <ItemGraph title={'Last day apple shares comparison'} class={'graph-item graph-daily-line'}>
+                            <ItemGraph title={'Previous day data'} class={'graph-item graph-daily-line'}>
                                 {
                                     (props.dataAppleDaily === null)
                                         ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
@@ -37,7 +37,7 @@ const AppleGraph = (props) => {
                             </ItemGraph>
                         </div>
                         <div className='main-panel-bottomSide-right'>
-                            <ItemGraph title={'Comparation with others companies'} class={'graph-item graph-daily-line'}>
+                            <ItemGraph title={'Comparaison with others companies'} class={'graph-item graph-daily-line'}>
                                 {
                                     (props.dataAppleDaily === null)
                                         ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
