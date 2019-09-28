@@ -160,6 +160,31 @@ a:hover .linkColorTransition{
     margin: 1rem auto;
     width: 97%;
     height: 88%;
+    display:flex;
+    flex-direction: column;
+}
+
+.main-panel-topside{
+    height: 40vh;
+}
+
+.main-panel-bottomSide{
+    margin: 0.8rem 0;
+    height: 45vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-panel-bottomSide-left{
+    height: 92%;
+    width: 49%;
+    margin: 1rem 0rem;
+}
+
+.main-panel-bottomSide-right{
+    height: 92%;
+    width: 49%;
+    margin: 1rem 0rem;
 }
 
 .graph-item{
@@ -170,8 +195,8 @@ a:hover .linkColorTransition{
 }
 
 .graph-daily-line{
-    width: 100rem;
-    height: 23rem;
+    width: 100%;
+    height: 100%;
 }
 
 .graph-item:hover{

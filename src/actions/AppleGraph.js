@@ -1,7 +1,7 @@
 import React from "react";
 import dailyGraphParameters from '../parameters/dailyGraph';
 import ConfigApi from '../ConfigApi';
-import getModel from '../Apexchart/model';
+import {getLineModel, getBarModel} from '../Apexchart/model';
 
 const URL_APPLE_DAILY = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symbol=${ConfigApi.apple}&apikey=${ConfigApi.key}`;
 
@@ -30,8 +30,8 @@ const fetchUrl = async (url) => {
         });
 };
 
-const prepareData = (data) => {
-    let model = getModel();
+const prepareDataDaily = (data) => {
+    let model = getLineModel();
     const objectArray = data['Time Series (Daily)'];
     const ArrayDate = [];
     const ArrayValue = [];
@@ -50,6 +50,46 @@ const prepareData = (data) => {
     return model;
 };
 
+const prepareComparation = async (data) => {
+    let model = getBarModel();
+    data = data['Time Series (Daily)'];
+    let firstItemDate = Object.keys(data)[0];
+    let firstItemData = data[Object.keys(data)[0]];
+    let arrayData = [];
+
+    let arrayNameValues = Object.keys(firstItemData).map(item => {
+            return item.split(' ')[1];
+    });
+
+    arrayNameValues.pop();
+
+    for (let index in firstItemData){
+        if (index !== '5. volume'){
+            arrayData.push(firstItemData[index]);
+        }
+    }
+
+    model.options.xaxis.categories = arrayNameValues;
+    model.options.title.text = firstItemDate + ' - Share price';
+    model.series = [{
+        name: 'price',
+        data: arrayData
+    }];
+
+    return model;
+};
+
+const getData = async () => {
+    let appleData = await fetchUrl(URL_APPLE_DAILY);
+    let resultDailyApple = await prepareDataDaily(appleData);
+    let resultAppleComparation = await prepareComparation(appleData);
+
+    return  {
+        dataDaily: resultDailyApple,
+        dataSharesComparation: resultAppleComparation
+    }
+}
+
 
 export const clearBuffer = () => ({
     dataAppleDaily: null,
@@ -60,8 +100,8 @@ export const clearBuffer = () => ({
 export const fetchData = () =>
     async (dispatch) => {
         try {
-            let result = await fetchUrl(URL_APPLE_DAILY);
-            dispatch(fetchDataSuccess(prepareData(result)));
+            let result = await getData();
+            dispatch(fetchDataSuccess(result));
         } catch (error) {
             console.error(error);
             dispatch(fetchDataError(error))

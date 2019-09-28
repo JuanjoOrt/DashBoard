@@ -17,13 +17,31 @@ const AppleGraph = (props) => {
         <Layout>
             <div className='main-panel'>
                 <div className='main-panel-graph'>
-                    <ItemGraph title={'Daily Apple Shares'} class={'graph-item graph-daily-line'}>
-                        {
-                            (props.dataAppleDaily === null)
-                                ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
-                                : <Chart options={props.dataAppleDaily.options} series={props.dataAppleDaily.series} type="line" height={'330px'}/>
-                        }
-                    </ItemGraph>
+                    <div className='main-panel-topside'>
+                        <ItemGraph title={'Daily Apple Shares'} class={'graph-item graph-daily-line'}>
+                            {
+                                (props.dataAppleDaily === null)
+                                    ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
+                                    : <Chart options={props.dataAppleDaily.dataDaily.options} series={props.dataAppleDaily.dataDaily.series} type="line" height={'330px'}/>
+                            }
+                        </ItemGraph>
+                    </div>
+                    <div className='main-panel-bottomSide'>
+                        <div className='main-panel-bottomSide-left'>
+                            <ItemGraph title={'Last day apple shares comparison'} class={'graph-item graph-daily-line'}>
+                                {
+                                    (props.dataAppleDaily === null)
+                                        ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
+                                        : <Chart options={props.dataAppleDaily.dataSharesComparation.options} series={props.dataAppleDaily.dataSharesComparation.series} type="bar" height={'340px'}/>
+                                }
+                            </ItemGraph>
+                        </div>
+                        <div className='main-panel-bottomSide-right'>
+                            <ItemGraph title={'Daily Apple Shares'} class={'graph-item graph-daily-line'}>
+
+                            </ItemGraph>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Layout>
