@@ -37,8 +37,12 @@ const AppleGraph = (props) => {
                             </ItemGraph>
                         </div>
                         <div className='main-panel-bottomSide-right'>
-                            <ItemGraph title={'Daily Apple Shares'} class={'graph-item graph-daily-line'}>
-
+                            <ItemGraph title={'Comparation with others companies'} class={'graph-item graph-daily-line'}>
+                                {
+                                    (props.dataAppleDaily === null)
+                                        ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
+                                        : <Chart options={props.dataAppleDaily.dataAllComparation.options} series={props.dataAppleDaily.dataAllComparation.series} type="donut" height={'340px'}/>
+                                }
                             </ItemGraph>
                         </div>
                     </div>
