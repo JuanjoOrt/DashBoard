@@ -150,6 +150,7 @@ a:hover .linkColorTransition{
     background-color: #C6ECAE;
 }
 .main{
+    overflow: auto;
     background-color: #ccc;
     width: calc(100vw - 15rem);
     height: calc(100vh - 6rem);
@@ -235,6 +236,20 @@ a:hover .linkColorTransition{
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+
+.main-home{
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+.main-home-text{
+    padding: 5rem 10rem;
+
+}
+
+.imagenIcono{
+    margin-right: 1rem;
 }
 
 
