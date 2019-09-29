@@ -2,7 +2,7 @@
 
 He analizado la necesidad de mi proyecto y decidido cuales son las mejores tecnologías para que funcionase correctamente tanto en el ámbito visual como en la funcionalidad del mismo.
 
-demo: https://sharesgraph.firebaseapp.com/google
+demo: https://sharesgraph.firebaseapp.com
 
 **La Api Rest que utilizo solo me permite hacer una petición por minuto, por lo que la navegación entre pagina y pagina fallará si no pasa al menos un minuto.
 
