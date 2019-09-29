@@ -28,7 +28,7 @@ La instalación del proyecto es muy sencilla, solo hacen falta un par de program
 Definición
 -------------
 
-El proyecto consiste en poder ver el precio de las acciones de diferentes compañías, se puede ver a tiempo real, de días o incluso semanas o meses.
+El proyecto consiste en poder ver el precio de las acciones de diferentes compañías, se puede ver de días o incluso semanas o meses.
 
 Me ha servido mucho para afianzar conocimientos tanto en React como en Redux, pudiendo crear componentes completamente reutilizables y útiles para utilizarlo varias veces en la aplicación. Por otra parte es la primera vez que instalo por cuenta propia un bundler como Webpack para poder compilar de mejor manera el codigo y que se pueda subir a producción de manera mimificada.
 
