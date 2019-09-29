@@ -11,14 +11,14 @@ const URL_INTEL_DAILY = `${ConfigApi.urlApi}function=${ConfigApi.timeDaily}&symb
 
 
 const fetchDataError = () => ({
-    dataAppleDaily: null,
+    dataMicrosoftDaily: null,
     type: dailyGraphParameters.FETCH_ERROR
 });
 
 
 
 const fetchDataSuccess = (result) => ({
-    dataAppleDaily: result,
+    dataMicrosoftDaily: result,
     type: dailyGraphParameters.FETCH_SUCCESS
 });
 
@@ -46,7 +46,7 @@ const prepareDataDaily = (data) => {
 
     model.options.xaxis.categories = ArrayDate.reverse();
     model.series = [{
-        name: 'Apple',
+        name: 'Microsoft',
         data: ArrayValue.reverse()
     }];
 
@@ -120,20 +120,20 @@ const getData = async () => {
     const ibmData = await fetchUrl(URL_IBM_DAILY);
     const intelData = await fetchUrl(URL_INTEL_DAILY);
 
-    const resultDailyApple = await prepareDataDaily(appleData);
-    const resultAppleComparation = await prepareComparation(appleData);
+    const resultMicrosoftGoogle = await prepareDataDaily(microsoftData);
+    const resultMicrosoftComparation = await prepareComparation(microsoftData);
     const resultPrepareAllComp = await prepareAllComp(appleData,microsoftData, googleData,ibmData,intelData);
 
     return  {
-        dataDaily: resultDailyApple,
-        dataSharesComparation: resultAppleComparation,
+        dataDaily: resultMicrosoftGoogle,
+        dataSharesComparation: resultMicrosoftComparation,
         dataAllComparation: resultPrepareAllComp
     }
 }
 
 
 export const clearBuffer = () => ({
-    dataAppleDaily: null,
+    dataMicrosoftDaily: null,
     type: dailyGraphParameters.CLEAR_BUFFER
 });
 

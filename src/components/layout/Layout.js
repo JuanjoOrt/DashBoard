@@ -26,7 +26,6 @@ const Layout = props => {
                         <SidebarItem link={routeLink.apple} title={'APPLE'} option={'A'}/>
                         <SidebarItem link={routeLink.google} title={'GOOGLE'} option={'B'}/>
                         <SidebarItem link={routeLink.microsoft} title={'MICROSOFT'} option={'C'}/>
-                        <SidebarItem link={routeLink.generalData} title={'GENERAL DATA'} option={'D'}/>
                     </ul>
                 </div>
                 <div className="main">
