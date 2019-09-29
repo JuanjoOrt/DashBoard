@@ -2,6 +2,10 @@
 
 He analizado la necesidad de mi proyecto y decidido cuales son las mejores tecnologías para que funcionase correctamente tanto en el ámbito visual como en la funcionalidad del mismo.
 
+demo: https://sharesgraph.firebaseapp.com/google
+
+**La Api Rest que utilizo solo me permite hacer una petición por minuto, por lo que la navegación entre pagina y pagina fallará si no pasa al menos un minuto.
+
 [![React](https://img.shields.io/badge/React-16.9.0-blue "React")](https://img.shields.io/badge/React-16.9.0-blue "React")
 [![Redux](https://img.shields.io/badge/Redux%20-4.0.4-yellowgreen  "Redux")](https://img.shields.io/badge/Redux%20-4.0.4-yellowgreen  "Redux")
 [![Webpack](https://img.shields.io/badge/Webpack-4.40.2-green "Webpack")](https://img.shields.io/badge/Webpack-4.40.2-green "Webpack")
