@@ -5,7 +5,7 @@ import Chart from "react-apexcharts";
 
 
 
-const AppleGraph = (props) => {
+const GoogleGraph = (props) => {
 
     useEffect(() => {
         props.fetchData()
@@ -20,7 +20,7 @@ const AppleGraph = (props) => {
                     <div className='main-panel-topside'>
                         <ItemGraph title={'Daily Google Shares'} class={'graph-item graph-daily-line'}>
                             {
-                                (props.dataGoogleDaily === null)
+                                (props.dataGoogleDaily === null || props.dataGoogleDaily === undefined)
                                     ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
                                     : <Chart options={props.dataGoogleDaily.dataDaily.options} series={props.dataGoogleDaily.dataDaily.series} type="line" height={'330px'}/>
                             }
@@ -30,7 +30,7 @@ const AppleGraph = (props) => {
                         <div className='main-panel-bottomSide-left'>
                             <ItemGraph title={'Previous day data'} class={'graph-item graph-daily-line'}>
                                 {
-                                    (props.dataGoogleDaily === null)
+                                    (props.dataGoogleDaily === null || props.dataGoogleDaily === undefined)
                                         ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
                                         : <Chart options={props.dataGoogleDaily.dataSharesComparation.options} series={props.dataGoogleDaily.dataSharesComparation.series} type="bar" height={'340px'}/>
                                 }
@@ -39,7 +39,7 @@ const AppleGraph = (props) => {
                         <div className='main-panel-bottomSide-right'>
                             <ItemGraph title={'Comparaison with others companies'} class={'graph-item graph-daily-line'}>
                                 {
-                                    (props.dataGoogleDaily === null)
+                                    (props.dataGoogleDaily === null || props.dataGoogleDaily === undefined)
                                         ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
                                         : <Chart options={props.dataGoogleDaily.dataAllComparation.options} series={props.dataGoogleDaily.dataAllComparation.series} type="donut" height={'340px'}/>
                                 }
@@ -53,4 +53,4 @@ const AppleGraph = (props) => {
 }
 
 
-export default AppleGraph;
+export default GoogleGraph;
