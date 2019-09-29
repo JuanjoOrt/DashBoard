@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import routeLink from './RouteLink';
 import Home from './components/home/index';
 import DailyGraph from './components/apple/index'
+import GoogleGraph from './components/google/index'
 import createStorage from './store/createStorage';
 
 let store = createStorage();
@@ -18,7 +19,7 @@ const App = (props) => {
             <Router>
                 <Route exact path={routeLink.home} component={Home} />
                 <Route path={routeLink.apple} component={DailyGraph}/>
-                <Route path={routeLink.google} component={Home}/>
+                <Route path={routeLink.google} component={GoogleGraph}/>
                 <Route path={routeLink.microsoft} component={Home}/>
                 <Route path={routeLink.generalData} component={Home}/>
             </Router>
