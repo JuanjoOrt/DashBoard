@@ -1,0 +1,27 @@
+[debug] [2019-09-30T20:49:05.657Z] ----------------------------------------------------------------------
+[debug] [2019-09-30T20:49:05.659Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\usuario\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2019-09-30T20:49:05.659Z] CLI Version:   7.4.0
+[debug] [2019-09-30T20:49:05.659Z] Platform:      win32
+[debug] [2019-09-30T20:49:05.659Z] Node Version:  v11.10.1
+[debug] [2019-09-30T20:49:05.660Z] Time:          Mon Sep 30 2019 22:49:05 GMT+0200 (GMT+02:00)
+[debug] [2019-09-30T20:49:05.660Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-09-30T20:49:05.667Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-09-30T20:49:05.667Z] > authorizing via signed-in user
+[debug] [2019-09-30T20:49:05.668Z] [iam] checking project sharesgraph for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-09-30T20:49:05.669Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-09-30T20:49:05.669Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-09-30T20:49:05.828Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-30T20:49:05.833Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/sharesgraph:testIamPermissions  
+
+[debug] [2019-09-30T20:49:06.675Z] <<< HTTP RESPONSE 200
+[debug] [2019-09-30T20:49:06.677Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/sharesgraph  
+ 
+[debug] [2019-09-30T20:49:06.933Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'sharesgraph'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-09-30T20:49:06.939Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/sharesgraph/versions  
+
