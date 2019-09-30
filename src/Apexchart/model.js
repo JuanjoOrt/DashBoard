@@ -20,6 +20,12 @@ export function getLineModel(){
             },
             xaxis: {
                 categories: null,
+                labels: {
+                    show: false,
+                }
+            },
+            axisTicks: {
+                show: false,
             }
         },
         series: null
