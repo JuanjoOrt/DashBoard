@@ -15,7 +15,9 @@ const HomeText = () => {
             <br/><br/>
             <h1>Descripción del proyecto</h1>
             <hr/>
-            La instalación del proyecto es muy sencilla, solo hacen falta un par de programas y conexión a Internet para poder hacer la conexión a tiempo real con la API que me provee los resultadosEl proyecto consiste en poder ver el precio de las acciones de diferentes compañías, se puede ver de días o incluso semanas o meses. <br/><br/>
+            La instalación del proyecto es muy sencilla, solo hacen falta un par de programas y conexión a Internet para poder hacer la conexión a tiempo real con la API que me provee los resultados <br/> <br/>
+
+            El proyecto consiste en poder ver el precio de las acciones de diferentes compañías, se puede ver de días o incluso semanas o meses. <br/><br/>
 
             Me ha servido mucho para afianzar conocimientos tanto en React como en Redux, pudiendo crear componentes completamente reutilizables y útiles para utilizarlo varias veces en la aplicación. Por otra parte es la primera vez que instalo por cuenta propia un bundler como Webpack para poder compilar de mejor manera el codigo y que se pueda subir a producción de manera mimificada. <br/><br/>
 
