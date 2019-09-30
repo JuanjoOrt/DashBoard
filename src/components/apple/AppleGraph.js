@@ -22,7 +22,7 @@ const AppleGraph = (props) => {
                             {
                                 (props.dataAppleDaily === null || props.dataAppleDaily === undefined)
                                     ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
-                                    : <Chart options={props.dataAppleDaily.dataDaily.options} series={props.dataAppleDaily.dataDaily.series} type="line" height={'330px'}/>
+                                    : <Chart options={props.dataAppleDaily.dataDaily.options} series={props.dataAppleDaily.dataDaily.series} type="line" height={'310vh'}/>
                             }
                         </ItemGraph>
                     </div>
@@ -32,7 +32,7 @@ const AppleGraph = (props) => {
                                 {
                                     (props.dataAppleDaily === null || props.dataAppleDaily === undefined)
                                         ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
-                                        : <Chart options={props.dataAppleDaily.dataSharesComparation.options} series={props.dataAppleDaily.dataSharesComparation.series} type="bar" height={'340px'}/>
+                                        : <Chart options={props.dataAppleDaily.dataSharesComparation.options} series={props.dataAppleDaily.dataSharesComparation.series} type="bar"  height={'310vh'}/>
                                 }
                             </ItemGraph>
                         </div>
@@ -41,7 +41,7 @@ const AppleGraph = (props) => {
                                 {
                                     (props.dataAppleDaily === null || props.dataAppleDaily === undefined)
                                         ? <div className='rolling-div'><img className="rolling" src="./images/rolling.svg" /></div>
-                                        : <Chart options={props.dataAppleDaily.dataAllComparation.options} series={props.dataAppleDaily.dataAllComparation.series} type="donut" height={'340px'}/>
+                                        : <Chart options={props.dataAppleDaily.dataAllComparation.options} series={props.dataAppleDaily.dataAllComparation.series} type="donut"  height={'310vh'}/>
                                 }
                             </ItemGraph>
                         </div>
