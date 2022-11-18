@@ -36,7 +36,7 @@
     "react-fusioncharts": "^3.0.1",
     "redux-logger": "^3.0.6",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "array-unique": "^0.3.2",
